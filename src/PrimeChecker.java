@@ -1,4 +1,3 @@
-package src;
 
 /**
  * Utility class for prime number validation problems.
