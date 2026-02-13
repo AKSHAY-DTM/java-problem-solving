@@ -1,15 +1,15 @@
 package src;
 
 /**
- * Utility class for solving prime number problems.
+ * Utility class for prime number validation problems.
  */
 public class PrimeChecker {
 
     /**
-     * Checks if a number is prime.
+     * Determines whether a given number is prime.
      *
      * @param number the number to evaluate
-     * @return true if prime, false otherwise
+     * @return true if the number is prime; false otherwise
      */
     public static boolean isPrime(int number) {
         if (number <= 1) {
@@ -25,8 +25,19 @@ public class PrimeChecker {
         return true;
     }
 
+    private static void printResult(int number) {
+        if (number <= 1) {
+            System.out.println("Input must be greater than 1.");
+            return;
+        }
+
+        System.out.println(
+                number + " is prime? " + isPrime(number)
+        );
+    }
+
     public static void main(String[] args) {
-        int testNumber = 29;
-        System.out.println(testNumber + " is prime? " + isPrime(testNumber));
+        final int testNumber = 29;
+        printResult(testNumber);
     }
 }
